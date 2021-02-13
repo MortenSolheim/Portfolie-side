@@ -1,0 +1,411 @@
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  //z-index: 1;
+  bottom: 0rem;
+
+  li {
+    position: absolute;
+    list-style: none;
+    display: block;
+
+    -webkit-filter: blur(0.3rem);
+    //background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #fff;
+    background-image: linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0)
+    );
+    border-radius: 50%;
+    //bottom: -360px;
+
+    -webkit-animation: square 25s infinite;
+    animation: square 25s infinite;
+
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+  }
+
+  .bubbles_1 {
+    left: 0%;
+    width: 10rem;
+    height: 10rem;
+    animation-delay: 4s;
+    animation-duration: 35s;
+    -webkit-animation: ANIMATION_1 35s infinite; /* Safari 4+ */
+    -moz-animation: ANIMATION_1 35s infinite; /* Fx 5+ */
+    -o-animation: ANIMATION_1 35s infinite; /* Opera 12+ */
+    animation: ANIMATION_1 35s infinite; /* IE 10+, Fx 29+ */
+  }
+  @keyframes ANIMATION_1 {
+    0% {
+      left: 0px;
+      bottom: -360px;
+    }
+    33% {
+      left: 70px;
+    }
+    66% {
+      left: -150px;
+    }
+
+    100% {
+      left: 0px;
+      bottom: 100vh;
+      opacity: 0;
+    }
+  }
+  .bubbles_2 {
+    left: 10%;
+    width: 15rem;
+    height: 15rem;
+
+    animation-delay: 22s;
+    animation-duration: 117s;
+    /*  animation-delay: 24s;
+    animation-duration: 35s; */
+    -webkit-animation: ANIMATION_2 35s infinite; /* Safari 4+ */
+    -moz-animation: ANIMATION_2 35s infinite; /* Fx 5+ */
+    -o-animation: ANIMATION_2 35s infinite; /* Opera 12+ */
+    animation: ANIMATION_2 35s infinite; /* IE 10+, Fx 29+ */
+  }
+  @keyframes ANIMATION_2 {
+    0% {
+      left: 10%;
+      bottom: -360px;
+    }
+    33% {
+      left: 13%;
+    }
+    66% {
+      left: 7%;
+      width: 10rem;
+      height: 10rem;
+    }
+
+    100% {
+      left: 10%;
+      bottom: 100vh;
+      width: 0rem;
+      height: 0rem;
+      opacity: 0;
+    }
+  }
+
+  .bubbles_3 {
+    left: 24%;
+
+    width: 30rem;
+    height: 30rem;
+
+    animation-delay: 2s;
+    animation-delay: 4s;
+    animation-duration: 40s;
+    -webkit-animation: ANIMATION_3 40s infinite; /* Safari 4+ */
+    -moz-animation: ANIMATION_3 40s infinite; /* Fx 5+ */
+    -o-animation: ANIMATION_3 40s infinite; /* Opera 12+ */
+    animation: ANIMATION_3 40s infinite; /* IE 10+, Fx 29+ */
+  }
+  @keyframes ANIMATION_3 {
+    0% {
+      left: 24%;
+      bottom: -360px;
+    }
+    33% {
+      left: 30%;
+    }
+    66% {
+      left: 20%;
+    }
+
+    100% {
+      left: 24%;
+      bottom: 100vh;
+      opacity: 0;
+    }
+  }
+
+  .bubbles_4 {
+    left: 40%;
+
+    width: 20rem;
+    height: 20rem;
+
+    animation-duration: 55s;
+    -webkit-animation: ANIMATION_4 55s infinite; /* Safari 4+ */
+    -moz-animation: ANIMATION_4 55s infinite; /* Fx 5+ */
+    -o-animation: ANIMATION_4 55s infinite; /* Opera 12+ */
+    animation: ANIMATION_4 55s infinite; /* IE 10+, Fx 29+ */
+  }
+  @keyframes ANIMATION_4 {
+    0% {
+      left: 35%;
+      bottom: -360px;
+    }
+    33% {
+      left: 38%;
+    }
+    66% {
+      left: 32%;
+    }
+
+    100% {
+      left: 35%;
+      bottom: 100vh;
+
+      opacity: 0;
+    }
+  }
+  .bubbles_5 {
+    left: 55%;
+
+    width: 10rem;
+    height: 10rem;
+
+    animation-delay: 2s;
+    animation-duration: 30s;
+    -webkit-animation: ANIMATION_5 30s infinite; /* Safari 4+ */
+    -moz-animation: ANIMATION_5 30s infinite; /* Fx 5+ */
+    -o-animation: ANIMATION_5 30s infinite; /* Opera 12+ */
+    animation: ANIMATION_5 30s infinite; /* IE 10+, Fx 29+ */
+  }
+  @keyframes ANIMATION_5 {
+    0% {
+      left: 55%;
+      bottom: -360px;
+    }
+    33% {
+      left: 58%;
+    }
+    66% {
+      left: 52%;
+    }
+
+    100% {
+      left: 55%;
+      bottom: 100vh;
+
+      opacity: 0;
+    }
+  }
+
+  .bubbles_6 {
+    left: 63%;
+
+    width: 5rem;
+    height: 5rem;
+
+    animation-delay: 2s;
+    animation-duration: 25s;
+    -webkit-animation: ANIMATION_6 25s infinite; /* Safari 4+ */
+    -moz-animation: ANIMATION_6 25s infinite; /* Fx 5+ */
+    -o-animation: ANIMATION_6 25s infinite; /* Opera 12+ */
+    animation: ANIMATION_6 25s infinite; /* IE 10+, Fx 29+ */
+  }
+  @keyframes ANIMATION_6 {
+    0% {
+      left: 63%;
+      bottom: -360px;
+    }
+    33% {
+      left: 66%;
+    }
+    66% {
+      left: 60%;
+    }
+
+    100% {
+      bottom: 100vh;
+      opacity: 0;
+    }
+  }
+
+  .bubbles_7 {
+    left: 70%;
+
+    width: 10rem;
+    height: 10rem;
+
+    animation-delay: 4s;
+    animation-duration: 45s;
+    -webkit-animation: ANIMATION_7 45s infinite; /* Safari 4+ */
+    -moz-animation: ANIMATION_7 45s infinite; /* Fx 5+ */
+    -o-animation: ANIMATION_7 45s infinite; /* Opera 12+ */
+    animation: ANIMATION_7 45s infinite; /* IE 10+, Fx 29+ */
+  }
+  @keyframes ANIMATION_7 {
+    0% {
+      left: 70%;
+      bottom: -360px;
+    }
+    33% {
+      left: 73%;
+    }
+    66% {
+      left: 67%;
+    }
+
+    100% {
+      bottom: 100vh;
+      opacity: 0;
+    }
+  }
+
+  .bubbles_8 {
+    left: 76%;
+
+    width: 50rem;
+    height: 50rem;
+
+    animation-delay: 4s;
+    animation-duration: 55s;
+    -webkit-animation: ANIMATION_8 55s infinite; /* Safari 4+ */
+    -moz-animation: ANIMATION_8 55s infinite; /* Fx 5+ */
+    -o-animation: ANIMATION_8 55s infinite; /* Opera 12+ */
+    animation: ANIMATION_8 55s infinite; /* IE 10+, Fx 29+ */
+  }
+  @keyframes ANIMATION_8 {
+    0% {
+      left: 76%;
+      bottom: -360px;
+    }
+    33% {
+      left: 85%;
+    }
+    66% {
+      left: 70%;
+    }
+
+    100% {
+      bottom: 100vh;
+
+      opacity: 0;
+    }
+  }
+  .bubbles_9 {
+    left: 90%;
+
+    width: 15rem;
+    height: 15rem;
+
+    animation-delay: 4s;
+    animation-duration: 35s;
+    -webkit-animation: ANIMATION_9 30s infinite; /* Safari 4+ */
+    -moz-animation: ANIMATION_9 30s infinite; /* Fx 5+ */
+    -o-animation: ANIMATION_9 30s infinite; /* Opera 12+ */
+    animation: ANIMATION_9 30s infinite; /* IE 10+, Fx 29+ */
+  }
+  @keyframes ANIMATION_9 {
+    0% {
+      left: 90%;
+      bottom: -360px;
+    }
+    33% {
+      left: 93%;
+    }
+    66% {
+      left: 87%;
+    }
+
+    100% {
+      left: 90%;
+      bottom: 100vh;
+
+      opacity: 0;
+    }
+  }
+
+  .bubbles_10 {
+    left: 100%;
+
+    width: 10rem;
+    height: 10rem;
+
+    animation-delay: 4s;
+    animation-duration: 20s;
+    -webkit-animation: ANIMATION_10 20s infinite; /* Safari 4+ */
+    -moz-animation: ANIMATION_10 20s infinite; /* Fx 5+ */
+    -o-animation: ANIMATION_10 20s infinite; /* Opera 12+ */
+    animation: ANIMATION_10 20s infinite; /* IE 10+, Fx 29+ */
+  }
+  @keyframes ANIMATION_10 {
+    0% {
+      left: 100%;
+      bottom: -360px;
+    }
+    33% {
+      left: 107%;
+    }
+    86% {
+      left: 95%;
+    }
+
+    100% {
+      left: 100%;
+      bottom: 100vh;
+      opacity: 0;
+    }
+  }
+
+  /*     
+
+    .bubbles3 {
+      left: 40%;
+      width: 60px;
+      height: 60px;
+
+      animation-duration: 22s;
+
+      background-color: fade(white, 25%);
+    }
+
+    .bubbles4 {
+      left: 80%;
+      width: 120px;
+      height: 120px;
+
+      animation-delay: 3s;
+      background-color: fade(white, 20%);
+    }
+
+    .bubbles5 {
+      left: 32%;
+      width: 160px;
+      height: 160px;
+
+      animation-delay: 7s;
+    }
+
+    .bubbles6 {
+      left: 55%;
+      width: 20px;
+      height: 20px;
+
+      animation-delay: 15s;
+      animation-duration: 40s;
+    }
+
+    .bubbles7 {
+      left: 25%;
+      width: 10px;
+      height: 10px;
+
+      animation-delay: 2s;
+      animation-duration: 40s;
+      background-color: fade(white, 30%);
+    }
+
+    .bubbles8 {
+      left: 90%;
+      width: 160px;
+      height: 160px;
+
+      animation-delay: 11s;
+    } */
+}

@@ -1,0 +1,16 @@
+@import "./abstracts/variables.scss";
+@import "./abstracts/_mixins_mediaqueries.scss";
+
+//@import "./components/_navbarv.scss";
+/* @import "./components/filter";
+@import "./components/button";
+@import "./components/_footer.scss";
+ */
+@import "./components/_bubbles.scss";
+
+@import "./base/base.scss";
+@import "./base/_container.scss";
+@import "./base/_input.scss";
+
+//pages
+@import "./pages/landing_pages/landing_pages.scss";

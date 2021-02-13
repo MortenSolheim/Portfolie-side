@@ -1,67 +1,47 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href='https://nextjs.org'>Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
+      <div className='LP-box'>
+        <h1>Søger du en</h1>
+        <p>
+          Jeg designer og koder smukke hjemmesider med de nyeste teknologier
         </p>
-
-        <div className={styles.grid}>
-          <a href='https://nextjs.org/docs' className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href='https://nextjs.org/learn' className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>
-              MORTEN Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href='https://github.com/vercel/next.js/tree/master/examples'
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href='https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{" "}
-          <img src='/vercel.svg' alt='Vercel Logo' className={styles.logo} />
-        </a>
-      </footer>
+        {/* <img
+          className='LP-img'
+          src='/undraw_heatmap_uyye.svg'
+          alt='BigCo Inc. logo'
+        /> */}
+        <ul className='LP-info'>
+          <li>mor</li>
+          <li>Projekter</li>
+          <li>Teknologier</li>
+          <li>Om_mig</li>
+          <li>Kontakt</li>
+        </ul>
+      </div>
+      <img
+        className='LP-img2'
+        src='/undraw_heatmap_uyye.svg'
+        alt='BigCo Inc. logo'
+      />
+      <ul className='bubbles'>
+        <li className='bubbles_1'></li>
+        <li className='bubbles_2'></li>
+        <li className='bubbles_3'></li>
+        <li className='bubbles_4'></li>
+        <li className='bubbles_5'></li>
+        <li className='bubbles_6'></li>
+        <li className='bubbles_7'></li>
+        <li className='bubbles_8'></li>
+        <li className='bubbles_9'></li>
+        <li className='bubbles_10'></li>
+      </ul>
     </div>
   );
 }

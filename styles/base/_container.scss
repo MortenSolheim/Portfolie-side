@@ -1,0 +1,23 @@
+.container {
+  margin: 2rem 1% 8rem 1%;
+  position: relative;
+  min-height: 95vh;
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+  .container {
+    margin: 2rem 1% 8rem 1%;
+  }
+}
+
+@media screen and (min-width: $breakpoint-laptop) {
+  .container {
+    margin: 8rem 3% 3rem 3%;
+  }
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+  .container {
+    margin: 5rem 10% 3rem 10%;
+  }
+}

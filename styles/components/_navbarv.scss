@@ -1,0 +1,554 @@
+.nav {
+  padding: 0 10% 0 10%;
+  width: 100%;
+  margin-bottom: 3rem;
+  height: 6.2rem;
+  position: relative;
+  background-image: linear-gradient(
+    to bottom right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  box-shadow: 0em 0.2em 0.5em 0.1em rgba($color-primary-dark, 0.3);
+  top: 0;
+  bottom: auto;
+  position: fixed;
+  z-index: 999;
+
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: $color-primary-white;
+  font-size: 4rem;
+
+  height: 6.2rem;
+  overflow: visible;
+  width: 22rem; //skal være lige så langt som checkbtn
+}
+.nav_btu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  //width: 25%;
+
+  height: 6.2rem;
+}
+
+.button {
+  border: none;
+  color: $color-primary-white;
+  padding: 0.8rem 1em;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  max-height: 3.5em;
+  margin: 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+
+  p {
+    display: block;
+  }
+
+  h5 {
+    display: none;
+  }
+}
+
+.button:hover {
+  background-color: $color-primary-white;
+  opacity: 0.9;
+  color: black;
+}
+
+.button:active {
+  transform: scale(0.96);
+  opacity: 0.7;
+}
+
+#check {
+  display: none;
+}
+
+.checkbtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  //width: 25%;
+
+  height: 6.2rem;
+}
+
+.checkbtn:hover {
+  opacity: 1;
+}
+
+.menu_btn {
+  float: right;
+  //position: relative;
+  //position: absolute;
+  position: block;
+  height: 5.5rem;
+  width: 22rem;
+  //background: rgba(255, 255, 255, 0.9);
+  background-color: $color-primary-white;
+  display: flex;
+
+  opacity: 0.95;
+
+  flex-direction: row;
+  justify-content: flex-start;
+  //display: block;
+  border-radius: 1rem;
+  -webkit-transition: all 0.3s;
+}
+
+.my_img {
+  width: 4.7rem;
+  height: 4.7rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  margin: 0.5rem 0.5rem 0.5rem 0.7rem;
+}
+
+.menu_info {
+  width: 15rem;
+  padding: 0.2rem;
+}
+.user_name {
+  color: #000;
+  margin-bottom: 0.4em;
+  display: block;
+}
+
+.bar-wrap {
+  width: 100%;
+  border-radius: 10em;
+  display: block;
+  background: $background-dark;
+}
+
+.bar-fill {
+  //det er den der hviser hvor mange % den er udfyldt
+  border-radius: 10em;
+  background-image: linear-gradient($color-primary-light, $color-primary-dark);
+  display: block;
+  height: 1.5rem;
+}
+
+.nav_menu {
+  position: fixed;
+  width: 22rem;
+  height: auto;
+  background-color: $color-primary-white;
+  top: 4.5rem;
+
+  bottom: auto;
+  transition: all 0.5s;
+
+  right: 10%;
+  visibility: hidden;
+  opacity: 0;
+  overflow: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  overflow: hidden;
+
+  li {
+    display: block;
+    width: 100%;
+    //margin: 2rem;
+    padding: 2rem;
+    font-size: 2rem;
+  }
+
+  a {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+li:nth-child(even) {
+  //den gør et værande li bliver en ande farve
+  background-color: $table-color;
+}
+
+.menu_nav {
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+    z-index: 1;
+    box-shadow: 0px 0px 1.8rem -1.2rem rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    transform: scale(1);
+    box-shadow: 0px;
+    opacity: 0.8;
+  }
+}
+
+/* a:hover,
+   a.active {
+     background: none;
+     color: #000;
+   } */
+
+#check:checked ~ .menu_btn {
+  border-radius: 1rem 1rem 0 0;
+  opacity: 1;
+  //background-color: rgb(255, 255, 255);
+  //box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#check:checked ~ .nav_menu {
+  //right: 0;
+
+  //box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1rem 1rem 1px rgba(0, 0, 0, 0.3);
+
+  right: 10%;
+  top: 5.9rem;
+  border-radius: 0 0 1rem 1rem;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: $breakpoint-laptop) {
+  .nav {
+    padding: 0;
+    height: 6.2rem;
+    box-shadow: 0em;
+    bottom: -3rem;
+
+    top: auto;
+    position: fixed;
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .nav_btu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    //width: 25%;
+    //background-color: rgb(235, 116, 107);
+    height: 4.5em;
+    grid-row: 1 / 1; //højde
+    grid-column: 1 / 4; //bredde
+  }
+
+  .button {
+    border: none;
+    color: $color-primary-white;
+    padding: 1em 1em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    height: 4.5em;
+    margin: 1rem;
+    width: 33.3%;
+    cursor: pointer;
+    border-radius: 0;
+    transition: 0.3s ease-in-out;
+
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    p {
+      display: none;
+    }
+
+    h5 {
+      display: block;
+    }
+
+    &__nonfiktion {
+      font-size: 1.2rem;
+      height: 2.5rem;
+      width: 2.5rem;
+
+      top: 0.3rem;
+      z-index: 2;
+      //right: 0.1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .checkbtn {
+    grid-row: 1 / 1; //højde
+    grid-column: 4 / 6; //bredde
+
+    height: 3.9em;
+    //background-color: rgb(107, 235, 160);
+    width: 100%;
+
+    /*    ul {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+       } */
+  }
+
+  .menu_btn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .my_img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    margin: 0.5rem 0.5rem 0.5rem 0.7rem;
+  }
+
+  .menu_info {
+    display: none;
+  }
+  .user_name {
+    display: none;
+  }
+
+  .bar-wrap {
+    display: none;
+  }
+
+  .nav_menu {
+    position: fixed;
+    width: 85%;
+    height: auto;
+    background-color: $color-primary-white;
+    top: 0;
+
+    bottom: 6.2rem;
+    transition: all 0.5s;
+
+    right: -100%;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 0;
+    overflow: auto;
+
+    display: flex;
+    //flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+
+  li:nth-child(even) {
+    //den gør et værande li bliver en ande farve
+    background-color: $table-color;
+  }
+
+  .menu_nav {
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.03);
+      z-index: 1;
+      box-shadow: 0px 0px 1.8rem -1.2rem rgb(125, 125, 125);
+    }
+
+    &:active {
+      transform: scale(1);
+      box-shadow: 0px;
+      opacity: 0.8;
+    }
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+    color: #000;
+  }
+  #check:checked ~ .checkbtn {
+    border-radius: 0;
+    opacity: 1;
+    z-index: 2;
+    //box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  #check:checked ~ .nav_menu {
+    //right: 0;
+
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+    right: 0%;
+    top: 0rem;
+    border-radius: 0;
+    visibility: visible;
+    opacity: 1;
+
+    /*   top: 80px; */
+  }
+}
+
+.o_img {
+  width: 4.7rem;
+  height: 4.7rem;
+  margin: 0.5rem;
+}
+@media screen and (min-width: $breakpoint-laptop) {
+  .nav {
+    padding: 0 3% 0 3%;
+  }
+
+  .menu_btn {
+    float: right;
+    //position: relative;
+    //position: absolute;
+    position: block;
+    height: 5.5rem;
+    width: 22rem;
+    //background: rgba(255, 255, 255, 0.9);
+    background-color: $color-primary-white;
+    display: flex;
+
+    opacity: 0.95;
+
+    flex-direction: row;
+    justify-content: flex-start;
+    //display: block;
+    border-radius: 1rem;
+    -webkit-transition: all 0.3s;
+  }
+
+  .my_img {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    //margin: 0.5rem 0.5rem 0.5rem 0.7rem;
+    margin: 0em;
+  }
+
+  .menu_info {
+    width: 15rem;
+    padding: 0.2rem;
+  }
+  .user_name {
+    color: #000;
+    margin-bottom: 0.4em;
+    display: block;
+  }
+
+  .bar-wrap {
+    width: 100%;
+    border-radius: 10em;
+    display: block;
+    background: $background-dark;
+  }
+
+  .bar-fill {
+    //det er den der hviser hvor mange % den er udfyldt
+    border-radius: 10em;
+    background-image: linear-gradient(
+      $color-primary-light,
+      $color-primary-dark
+    );
+    display: block;
+    height: 1.5rem;
+  }
+
+  .nav_menu {
+    position: fixed;
+    width: 22rem;
+    height: auto;
+    background-color: $color-primary-white;
+    top: 4.5rem;
+
+    bottom: auto;
+    transition: all 0.5s;
+
+    right: 3%;
+    visibility: hidden;
+    opacity: 0;
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    li {
+      display: block;
+      width: 100%;
+      //margin: 2rem;
+      padding: 2rem;
+      font-size: 2rem;
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  #check:checked ~ .nav_menu {
+    //right: 0;
+
+    right: 3%;
+    top: 5.9rem;
+  }
+}
+
+@media screen and (min-width: $breakpoint-desktop) {
+  .nav {
+    padding: 0 10% 0 10%;
+  }
+
+  .bar-fill {
+    //det er den der hviser hvor mange % den er udfyldt
+    border-radius: 10em;
+    background-image: linear-gradient(
+      $color-primary-light,
+      $color-primary-dark
+    );
+    margin-top: -0.7rem;
+    display: block;
+    height: 1.5rem;
+  }
+
+  .nav_menu {
+    right: 10%;
+  }
+
+  #check:checked ~ .nav_menu {
+    //right: 0;
+
+    right: 10%;
+    top: 5.9rem;
+  }
+}

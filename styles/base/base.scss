@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Sarala&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 300;
+  //letter-spacing: normal;
+  letter-spacing: 0.03em;
+  line-height: 1.7;
+  background-image: linear-gradient(
+    to bottom right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  /*  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+
+    min-height: 100vh;*/
+  //color: $color-font;
+  font-family: "Sarala", sans-serif;
+  //? kode til test med footer
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100%;
+  position: relative;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1.3rem;
+  border-radius: 5rem;
+  //display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: $background-light;
+  border-radius: 5rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(202, 202, 202);
+  border-radius: 5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(
+    to bottom right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+}
+
+a {
+  text-decoration: none;
+  color: $color-font;
+}
+
+br {
+  display: block;
+  margin: 1rem;
+}
+
+textarea {
+  border-radius: 1rem;
+  font-family: "Sarala", sans-serif;
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  box-shadow: inset 0 0 0.25rem #ddd;
+
+  &:focus {
+    //outline: none;
+    border: 1px solid darken(#ddd, 5%);
+    box-shadow: inset 0 0 0.5rem darken(#ddd, 5%);
+  }
+}
+
+hr {
+  //skal måske ind i profil
+  border: 1px solid #eee;
+}
+
+//ved ikke 100% hvad den gør
+/* *:after,
+*:before {
+  box-sizing: inherit;
+} */
+
+//https://www.impactbnd.com/blog/how-font-sizes-effect-ux //*fontstørrelser bør ændeser på mobil og ipad osv :)
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+div {
+  margin-top: 0;
+
+  font-family: "Sarala", sans-serif;
+
+  -webkit-hyphens: manual !important;
+  -moz-hyphens: manual !important;
+  -ms-hyphens: manual !important;
+  hyphens: manual !important;
+}
+
+p,
+th,
+td,
+div {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+  //letter-spacing: -0.08rem;
+}
+
+h5 {
+  font-size: 1.7rem;
+  //letter-spacing: -0.05rem;
+}
+
+h6 {
+  font-size: 1.6rem;
+  //letter-spacing: 0;
+}
+
+@include tablet {
+  p,
+  th,
+  td,
+  div {
+    font-size: 1.6rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+    letter-spacing: -0.08rem;
+    line-height: 1.22em;
+  }
+}
+
+@include desktop {
+  p,
+  th,
+  td,
+  div {
+    font-size: 1.9rem;
+  }
+
+  h1 {
+    font-size: 4.8rem;
+    //line-height: 1.05em;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  h3 {
+    font-size: 2.8rem;
+    // line-height: 1.25em;
+  }
+}

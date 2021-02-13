@@ -1,0 +1,53 @@
+// COLORS
+$color-primary: #55c57a;
+$color-primary-light: #74bee0;
+$color-primary-dark: #076bbd;
+/* $color-primary-light: #e0748b;
+$color-primary-dark: #bd0725; */
+
+$color-primary-white: #fbfbfb;
+
+$warning-box-color: #f7ecec;
+$warning-border-color: #f4c2c2;
+$warning-font-color: #eb9f9f;
+
+$transparent: rgba(0, 0, 0, 0);
+
+$background-light: #a4a4fc;
+$background-dark: #2766db; //der er ikke en dark lige P.T
+
+$table-color: rgb(241, 241, 241); //#fafafa
+
+$color-white: #fff;
+$color-black: #2e2e2e;
+
+$color-font: #737373;
+
+$color-footer-font: #888;
+$color-footer: #333;
+
+$color-checkbox: rgb(88, 202, 255);
+$color-checkbox-light: rgba(88, 202, 255, 0.3);
+
+// FONT
+$default-font-size: 1.6rem;
+
+//Breakpoints
+//$phone:
+$tab-port: 48em;
+$tab-land: 84em;
+$big-desktop: 112em;
+$breakpoint-mobile: 1em; /* /*  */
+// $breakpoint-tablet: 40em; /*  //=768px */
+// $breakpoint-laptop: 64em; /*  //64em)	≥ 1024px */
+// $breakpoint-desktop: 120em; /*  // 80em)	≥ 1280px */
+
+$breakpoint-tablet: 768px; /*  //=768px */
+$breakpoint-laptop: 1023px; /*  //64em)	≥ 1024px */
+$breakpoint-desktop: 1280px; /*  // 80em)	≥ 1280px */
+
+/* $breakpoint-mobile: 1em;
+$breakpoint-tablet: 768px; //=768px
+$breakpoint-laptop: 1024px; //64em)	≥ 1024px
+$breakpoint-desktop: 1280px; // 80em)	≥ 1280px
+ */
